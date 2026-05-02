@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XD Store - A número 1 de Minecraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/icons/xd.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/professional.css">
+</head>
+<body>
+  <!-- Background animado com orbes -->
+  <div class="animated-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <div class="announcement" role="region" aria-live="polite">
+    <div class="announcement-inner">
+      <div class="led-screen" aria-hidden="false">
+        <div class="marquee" aria-hidden="false">
+          <span>⚡ Promoções ativas • Entrega digital imediata • Suporte via Discord</span>
+          <span aria-hidden="true">⚡ Promoções ativas • Entrega digital imediata • Suporte via Discord</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <h1 class="store-name">XD STORE <small class="store-sub">(TOP 1)</small></h1>
+      <nav class="header-nav">
+        <a href="pages/sobre.html" class="nav-link">Sobre</a>
+        <a href="pages/parceiros.html" class="nav-link">Parceiros</a>
+        <a href="pages/FAQ.html" class="nav-link">FAQ</a>
+        <a href="pages/Blog.html" class="nav-link">Novidades</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="support-button" aria-label="Alternar tema">🌓</button>
+        <button id="open-cart" class="cart-button" aria-label="Abrir carrinho">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-text">Sacola</span>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+
+    <section class="hero-section">
+      <div class="hero-bg-effects" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-top-badge">
+          <span class="badge-crown">👑</span>
+          <span>LOJA #1 DO MINECRAFT</span>
+        </div>
+
+        <div class="hero-logo-wrapper animate-float">
+          <img src="assets/icons/XD2.png" alt="XD Store" class="hero-logo-img">
+          <div class="hero-logo-glow"></div>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-main text-gradient">XD STORE</span>
+          <span class="title-sub">Itens Digitais Premium</span>
+        </h1>
+
+        <p class="hero-description">
+          A melhor loja de itens digitais para Minecraft. Entrega imediata via Discord,
+          pagamento seguro e suporte 24/7.
+        </p>
+
+        <div class="hero-highlights">
+          <div class="highlight-card">
+            <span class="highlight-icon">⚡</span>
+            <span>Entrega em 5min</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">🔒</span>
+            <span>100% Seguro</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">💬</span>
+            <span>Suporte 24h</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary btn-large pulse-glow">
+            <span>Comprar Agora</span>
+            <span class="btn-icon">→</span>
+          </a>
+          <a href="pages/sobre.html" class="btn-secondary btn-large">
+            <span>Como Funciona</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <span class="stat-value counter" data-target="500+">0</span>
+            <span class="stat-label">Clientes</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-value">600+</span>
+            <span class="stat-label">Pedidos</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-value">99%</span>
+            <span class="stat-label">Satisfação</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Barra de Busca -->
+    <section class="search-section">
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="product-search" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+        <button class="search-clear" id="search-clear" aria-label="Limpar busca">✕</button>
+      </div>
+      
+      <!-- Filtros -->
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="promo">🔥 Promoções</button>
+        <button class="filter-btn" data-filter="low">Menor Preço</button>
+        <button class="filter-btn" data-filter="high">Maior Preço</button>
+      </div>
+    </section>
+
+    <section id="products" class="products-section">
+      <h2 class="section-title">Nossos Destaques</h2>
+      <div class="products-list"></div>
+    </section>
+
+    <!-- Seção de Contas -->
+    <section class="accounts-section" id="contas">
+      <div class="accounts-container">
+        <h2 class="section-title">Compre Contas Premium</h2>
+        <p class="accounts-subtitle">Contas verificadas e seguras para seus jogos favoritos</p>
+        
+        <div class="accounts-grid">
+          <a href="pages/minecraft.html" class="account-card" data-game="minecraft">
+            <div class="account-image-wrapper">
+              <img src="assets/icons/XD2.png" alt="Minecraft" class="account-image">
+            </div>
+            <div class="account-info">
+              <h3 class="account-name">Minecraft</h3>
+              <p class="account-desc">Contas premium originais</p>
+            </div>
+            <span class="account-badge">Mais Vendido</span>
+          </a>
+
+          <a href="pages/valorant.html" class="account-card" data-game="valorant">
+            <div class="account-image-wrapper">
+              <img src="assets/icones/valorant.png" alt="Valorant" class="account-image">
+            </div>
+            <div class="account-info">
+              <h3 class="account-name">Valorant</h3>
+              <p class="account-desc">Contas com skins raras</p>
+            </div>
+            <span class="account-badge hot">🔥 Em Alta</span>
+          </a>
+
+          <a href="pages/steam.html" class="account-card" data-game="steam">
+            <div class="account-image-wrapper">
+              <img src="assets/icones/steam.png" alt="Steam" class="account-image">
+            </div>
+            <div class="account-info">
+              <h3 class="account-name">Steam</h3>
+              <p class="account-desc">Bibliotecas completas</p>
+            </div>
+            <span class="account-badge">Garantia</span>
+          </a>
+
+          <a href="pages/epic-games.html" class="account-card" data-game="epic">
+            <div class="account-image-wrapper">
+              <div class="account-icon-epic">⚔️</div>
+            </div>
+            <div class="account-info">
+              <h3 class="account-name">Epic Games</h3>
+              <p class="account-desc">Jogos exclusivos e Fortnite</p>
+            </div>
+            <span class="account-badge hot">🔥 Popular</span>
+          </a>
+
+          <a href="pages/discord.html" class="account-card" data-game="discord">
+            <div class="account-image-wrapper">
+              <img src="assets/images/discord.png" alt="Discord" class="account-image">
+            </div>
+            <div class="account-info">
+              <h3 class="account-name">Discord</h3>
+              <p class="account-desc">Contas com nitro e badges</p>
+            </div>
+            <span class="account-badge">Verificadas</span>
+          </a>
+
+          <a href="pages/roblox.html" class="account-card" data-game="roblox">
+            <div class="account-image-wrapper">
+              <img src="assets/icones/roblox.png" alt="Roblox" class="account-image">
+            </div>
+            <div class="account-info">
+              <h3 class="account-name">Roblox</h3>
+              <p class="account-desc">Contas com robux e itens</p>
+            </div>
+            <span class="account-badge hot">📈 Tendência</span>
+          </a>
+
+          <a href="pages/fortnite.html" class="account-card" data-game="fortnite">
+            <div class="account-image-wrapper">
+              <div class="account-icon-fortnite">🏆</div>
+            </div>
+            <div class="account-info">
+              <h3 class="account-name">Fortnite</h3>
+              <p class="account-desc">Skins lendárias e VBucks</p>
+            </div>
+            <span class="account-badge">Premium</span>
+          </a>
+        </div>
+
+        <div class="accounts-cta-wrapper">
+          <a href="pages/contas.html" class="btn-explore-accounts">
+            <span>Explorar Todas as Contas</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção de Benefícios -->
+    <section class="benefits-section">
+      <div class="benefit-card">
+        <span class="benefit-icon">⚡</span>
+        <h3>Entrega Imediata</h3>
+        <p>Receba seu produto em minutos após a confirmação do pagamento via Discord.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">🔒</span>
+        <h3>Pagamento Seguro</h3>
+        <p>Transações protegidas com criptografia. Seus dados estão sempre seguros.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">💬</span>
+        <h3>Suporte 24/7</h3>
+        <p>Equipe dedicada pronta para ajudar a qualquer momento no Discord.</p>
+      </div>
+    </section>
+
+    <!-- Estatísticas de Confiança -->
+    <section class="trust-stats">
+      <div class="stat-item">
+        <div class="stat-number">300+</div>
+        <div class="stat-label">Clientes Satisfeitos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Pedidos Entregues</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">99%</div>
+        <div class="stat-label">Avaliação Positiva</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><5min</div>
+        <div class="stat-label">Tempo Médio de Entrega</div>
+      </div>
+    </section>
+
+    <!-- Selos de Segurança -->
+    <section class="security-badges">
+      <div class="security-badge">
+        <span class="icon">🔒</span>
+        <span>Pagamento Seguro</span>
+      </div>
+      <div class="security-badge">
+        <span class="icon">⚡</span>
+        <span>Entrega Rápida</span>
+      </div>
+      <div class="security-badge">
+        <span class="icon">💎</span>
+        <span>Qualidade Garantida</span>
+      </div>
+      <div class="security-badge">
+        <span class="icon">🛡️</span>
+        <span>Suporte Confiável</span>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="testimonials-section">
+      <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">Melhor loja que já comprei! Entrega super rápida e o suporte me ajudou em tudo. Recomendo demais!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div>
+              <div class="testimonial-name">Mateus R.</div>
+              <div class="testimonial-date">Cliente desde 2025</div>
+              <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">Já comprei várias vezes e nunca tive problema. Tudo muito profissional e bem organizado. Nota 10!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JP</div>
+            <div>
+              <div class="testimonial-name">João P.</div>
+              <div class="testimonial-date">Cliente desde 2025</div>
+              <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">Produto chegou em menos de 5 minutos! Atendimento incrível no Discord. Virei cliente fiel.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LG</div>
+            <div>
+              <div class="testimonial-name">Lucas G.</div>
+              <div class="testimonial-date">Cliente desde 2025</div>
+              <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bg-effects" aria-hidden="true">
+      <div class="footer-orb footer-orb-1"></div>
+      <div class="footer-orb footer-orb-2"></div>
+    </div>
+    <div class="footer-container">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="assets/icons/XD2.png" alt="XD Store" class="footer-logo-img">
+          <h4>XD STORE</h4>
+        </div>
+        <p style="color:var(--muted);font-size:0.9rem;line-height:1.6;">
+          A loja número 1 de itens digitais para Minecraft. Entrega imediata e segura via Discord.
+        </p>
+        <div class="footer-social">
+          <a href="https://discord.gg/3t7g9TbN5M" target="_blank" rel="noopener" class="social-link" aria-label="Discord">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>🏠 Links Rápidos</h4>
+        <a href="index.html">Início</a>
+        <a href="pages/sobre.html">Sobre Nós</a>
+        <a href="pages/parceiros.html">Parceiros</a>
+        <a href="pages/FAQ.html">Perguntas Frequentes</a>
+        <a href="pages/Blog.html">Blog</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>💬 Suporte</h4>
+        <a href="https://discord.gg/3t7g9TbN5M" target="_blank" rel="noopener">Discord</a>
+        <a href="pages/checkout.html">Finalizar Compra</a>
+        <a href="pages/FAQ.html#compras">Política de Reembolso</a>
+        <a href="pages/FAQ.html#entrega">Como Receber</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>💳 Pagamento</h4>
+        <div class="payment-methods">
+          <span class="payment-badge">💳 PIX</span>
+          <span class="payment-badge">💳 Cartão</span>
+          <span class="payment-badge">💰 Boleto</span>
+        </div>
+        <div class="security-note">
+          <span class="security-icon">🔒</span>
+          <span>Pagamento 100% Seguro</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-stats">
+        <div class="stat">
+          <span class="stat-number">300+</span>
+          <span class="stat-label">Clientes</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Pedidos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">99%</span>
+          <span class="stat-label">Satisfação</span>
+        </div>
+      </div>
+      <p>© 2026 XD STORE. Todos os direitos reservados. | Feito com 💜 para a comunidade Minecraft</p>
+    </div>
+  </footer>
+
+  <!-- Carrinho lateral -->
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Carrinho</h3>
+      <button id="close-cart" class="close-cart">×</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <p>Total: <strong id="cart-total">R$ 0,00</strong></p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+        <a href="pages/checkout.html" class="checkout-button" aria-label="Finalizar compra">Finalizar compra</a>
+        <div style="display:flex;gap:8px;">
+          <button class="clear-cart" aria-label="Limpar carrinho" style="background:#ff5555;color:#fff;border:none;padding:8px;border-radius:8px;">Limpar carrinho</button>
+        </div>
+      </div>
+    </div>
+</aside>
+
+  <!-- Botão de Suporte (Discord) -->
+  <a href="https://discord.gg/3t7g9TbN5M" class="discord-support" target="_blank" rel="noopener noreferrer" aria-label="Suporte no Discord" title="Suporte no Discord (XD Store)">
+    <img src="assets/images/discord.png" alt="Discord" width="20" height="20">
+    <span>Suporte</span>
+  </a>
+
+  <script>
+    // Robust theme toggle with wipe animation that applies the theme mid-animation.
+    (function(){
+      const btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      const DURATION = 1000; // ms (matches CSS)
+
+      btn.addEventListener('click', (e)=>{
+        // prevent other handlers to control timing and ensure visible animation
+        e.stopImmediatePropagation();
+        try{
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+            // fallback: simple toggle
+            const cur = localStorage.getItem('xd-theme') || 'dark';
+            const next = cur === 'dark' ? 'light' : 'dark';
+            if (next === 'light') document.documentElement.setAttribute('data-theme','light'); else document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('xd-theme', next);
+            return;
+          }
+
+          // Determine next theme
+          const cur = localStorage.getItem('xd-theme') || 'dark';
+          const next = cur === 'dark' ? 'light' : 'dark';
+
+          // create wipe overlay and set theme to match target
+          const wipe = document.createElement('div');
+          wipe.className = 'theme-wipe ' + (next === 'light' ? 'light' : 'dark');
+          document.body.appendChild(wipe);
+
+          // trigger animation
+          // ensure micro animations run too
+          document.documentElement.classList.add('theme-animating','with-transition');
+          // start wipe
+          // small timeout to ensure element is in the DOM
+          setTimeout(()=> wipe.classList.add('active'), 10);
+
+          // apply theme midway so user sees transition
+          setTimeout(()=>{
+            if (next === 'light') document.documentElement.setAttribute('data-theme','light'); else document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('xd-theme', next);
+          }, DURATION/2);
+
+          // cleanup after animation
+          setTimeout(()=>{
+            wipe.classList.remove('active');
+            setTimeout(()=>{ try{ wipe.remove(); }catch(e){} }, 220);
+            document.documentElement.classList.remove('theme-animating');
+            setTimeout(()=>{ document.documentElement.classList.remove('with-transition'); }, 120);
+          }, DURATION + 80);
+
+        }catch(e){ /* noop */ }
+      });
+    })();
+  </script>
+
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

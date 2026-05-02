@@ -1,0 +1,4 @@
+Hero Section: id="hero" - Seção inicial com título e filtros.
+Categories Section: id="categorias" - Seção com categorias de jogos (Minecraft, Roblox, etc.).
+Featured Products Section: id="destaques" - Seção com produtos em destaque.
+Products Grid Section: id="produtos" - Seção com grid de produtos.

@@ -1,0 +1,22 @@
+# Configuração do Netlify para XD Store
+
+# Pasta que contém os arquivos estáticos a servirem
+[build]
+  publish = "."
+  command = "echo 'Site estático, nenhum build necessário'"
+
+# Headers para cache
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
