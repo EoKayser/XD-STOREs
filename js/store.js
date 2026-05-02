@@ -10,7 +10,7 @@ const PRODUCTS = [
   { id: 1, name: "Minecraft Premium", price: 60.00, promoPrice: 40.90, promoEnabled: true, img: "assets/images/minejava.png", description: "Conta Minecraft Java Edition original", disabled: false },
   { id: 2, name: "Valorant Mista", price: 150.00, promoPrice: 0, promoEnabled: false, img: "assets/images/conta valorant.png", description: "Conta com skins exclusivas", disabled: false },
   { id: 3, name: "Discord Nitro", price: 19.90, promoPrice: 0, promoEnabled: false, img: "assets/images/discordnitro.png", description: "Nitro ativo com badges", disabled: false },
-  { id: 4, name: "Xbox Game Pass", price: 34.90, promoPrice: 0, promoEnabled: false, img: "assets/images/xbox.png", description: "Acesso a jogos do Xbox", disabled: false },
+  { id: 4, name: "Xbox Game Pass", price: 34.90, promoPrice: 0, promoEnabled: false, img: "assets/images/gamepass.png", description: "Acesso a jogos do Xbox", disabled: false },
   { id: 5, name: "Dinheiro GTA ONLINE", price: 99.90, promoPrice: 79.90, promoEnabled: true, img: "assets/images/gta.png", description: "Descrição aqui", disabled: false },
   { id: 6, name: "Epic Games Conta Sortida", price: 3.00, promoPrice: 0, promoEnabled: false, img: "assets/images/epic.png", description: "Assinatura para jogos PS", disabled: true }
 ]
