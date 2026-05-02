@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[NOME DO PRODUTO] - XD Store</title>
+  <meta name="description" content="[DESCRIÇÃO CURTA DO PRODUTO]">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../assets/icons/xd.png">
+  <link rel="stylesheet" href="../../css/produtos.css">
+  <style>
+    .variation-section {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .variation-label {
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .variation-options {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .variation-btn {
+      padding: 10px 16px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      position: relative;
+    }
+
+    .variation-btn:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .variation-btn.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-color: #667eea;
+      box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .variation-price-tag {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .price-update-highlight {
+      background: rgba(102, 126, 234, 0.1);
+      border-left: 3px solid #667eea;
+      padding: 12px;
+      border-radius: 6px;
+      margin: 12px 0;
+      font-size: 0.9rem;
+    }
+
+    select.variation-select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    select.variation-select:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    select.variation-select:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+    }
+
+    select.variation-select option {
+      background: #1a1a2e;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../../index.html" class="store-name">XD STORE <small class="store-sub">(TOP 1)</small></a>
+      <nav class="header-nav">
+        <a href="../../index.html" class="nav-link">Início</a>
+        <a href="../sobre.html" class="nav-link">Sobre</a>
+        <a href="../parceiros.html" class="nav-link">Parceiros</a>
+        <a href="../FAQ.html" class="nav-link">FAQ</a>
+        <a href="../Blog.html" class="nav-link">Novidades</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="support-button" aria-label="Alternar tema">🌓</button>
+        <button id="open-cart" class="cart-button" aria-label="Abrir carrinho">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-text">Sacola</span>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="product-hero-section" style="padding-top: 40px;">
+      <div class="product-hero-container">
+        <div class="product-breadcrumb">
+          <a href="../../index.html">Início</a> / <a href="../contas.html">Produtos</a> / <span>[NOME DO PRODUTO]</span>
+        </div>
+
+        <div class="product-layout-grid">
+          <div class="product-image-column">
+            <div class="product-main-image-wrapper">
+              <img src="../../assets/images/[NOME_ARQUIVO_IMAGEM].png" alt="[NOME DO PRODUTO]" class="product-main-image" id="mainProductImage">
+              <div class="product-image-glow"></div>
+            </div>
+          </div>
+
+          <div class="product-info-column">
+            <div class="product-badges-top">
+              <span class="badge-featured">🎮 [CATEGORIA/EMOJI]</span>
+              <span class="badge-instock">✅ Em Estoque</span>
+            </div>
+
+            <h1 class="product-title-main">[NOME DO PRODUTO]</h1>
+
+            <p class="product-short-desc">[DESCRIÇÃO CURTA - Uma a duas linhas sobre o produto]</p>
+
+            <div class="product-rating" style="margin: 20px 0;">
+              <div class="stars">★★★★★</div>
+              <span class="rating-count">([NÚMERO] avaliações)</span>
+            </div>
+
+            <!-- SEÇÃO DE VARIAÇÕES - AQUI COMEÇA O INTERESSANTE! -->
+            <div class="variation-section">
+              <div class="variation-label">🎯 Escolha sua variação:</div>
+              <div class="variation-options" id="variationOptions">
+                <!-- Opção 1 -->
+                <button class="variation-btn active" data-variation="option1" data-price="19.90">
+                  [LABEL_VARIAÇÃO_1]
+                  <span class="variation-price-tag">R$ 19,90</span>
+                </button>
+                <!-- Opção 2 -->
+                <button class="variation-btn" data-variation="option2" data-price="45.90">
+                  [LABEL_VARIAÇÃO_2]
+                  <span class="variation-price-tag">R$ 45,90</span>
+                </button>
+                <!-- Opção 3 -->
+                <button class="variation-btn" data-variation="option3" data-price="79.90">
+                  [LABEL_VARIAÇÃO_3]
+                  <span class="variation-price-tag">R$ 79,90</span>
+                </button>
+                <!-- Adicione mais opções se necessário -->
+              </div>
+            </div>
+
+            <div class="product-price-section">
+              <div class="price-container">
+                <span id="product-price" class="price-current-single">R$ 19,90</span>
+              </div>
+              <div class="price-update-highlight" id="priceUpdateInfo">
+                Preço atualizado: 1 mês - R$ 19,90
+              </div>
+            </div>
+
+            <div class="product-quick-features">
+              <div class="quick-feature">
+                <span class="feature-icon">⚡</span>
+                <span>Entrega imediata via Discord</span>
+              </div>
+              <div class="quick-feature">
+                <span class="feature-icon">🔒</span>
+                <span>Compra 100% segura</span>
+              </div>
+              <div class="quick-feature">
+                <span class="feature-icon">✅</span>
+                <span>Garantia de 7 dias</span>
+              </div>
+            </div>
+
+            <div class="product-action-buttons">
+              <button class="btn-primary-add" id="addToCartBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                Adicionar à Sacola
+              </button>
+              <button class="btn-secondary-buy">
+                <span>Comprar Agora</span>
+              </button>
+            </div>
+
+            <div class="product-payment-info">
+              <p>💳 Aceitamos PIX, Cartão e Boleto</p>
+              <p>🛡️ Compra protegida com garantia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-details-section">
+      <div class="details-container">
+        <h2 class="details-heading">📋 Descrição do Produto</h2>
+        <div class="details-content">
+          <p>[DESCRIÇÃO DETALHADA DO PRODUTO - Pode ter múltiplos parágrafos]</p>
+          
+          <div class="features-grid">
+            <div class="feature-box">
+              <div class="feature-box-icon">[EMOJI]</div>
+              <h4>[CARACTERÍSTICA 1]</h4>
+              <p>[DESCRIÇÃO DA CARACTERÍSTICA]</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-box-icon">[EMOJI]</div>
+              <h4>[CARACTERÍSTICA 2]</h4>
+              <p>[DESCRIÇÃO DA CARACTERÍSTICA]</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-box-icon">[EMOJI]</div>
+              <h4>[CARACTERÍSTICA 3]</h4>
+              <p>[DESCRIÇÃO DA CARACTERÍSTICA]</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-box-icon">[EMOJI]</div>
+              <h4>[CARACTERÍSTICA 4]</h4>
+              <p>[DESCRIÇÃO DA CARACTERÍSTICA]</p>
+            </div>
+          </div>
+
+          <div class="what-includes">
+            <h3>✨ O que está incluso:</h3>
+            <ul>
+              <li>[ITEM 1]</li>
+              <li>[ITEM 2]</li>
+              <li>[ITEM 3]</li>
+              <li>[ITEM 4]</li>
+            </ul>
+          </div>
+
+          <div class="requirements-box">
+            <h4>✅ Requisitos:</h4>
+            <ul>
+              <li>[REQUISITO 1]</li>
+              <li>[REQUISITO 2]</li>
+              <li>[REQUISITO 3]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-reviews-section">
+      <div class="reviews-container">
+        <h2 class="reviews-heading">⭐ Avaliações dos Clientes</h2>
+        <div class="reviews-summary">
+          <div class="rating-overview">
+            <span class="big-rating">★★★★★</span>
+            <span class="average-rating">4.5</span>
+          </div>
+          <p style="color:var(--muted);margin-top:8px;">Baseado em [NÚMERO] avaliações</p>
+        </div>
+        <div class="reviews-list">
+          <div class="review-item">
+            <div class="review-header">
+              <span class="review-author">[CLIENTE]</span>
+              <span class="review-rating">★★★★★</span>
+            </div>
+            <p class="review-text">[AVALIAÇÃO/COMENTÁRIO]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-products-section">
+      <div class="related-container">
+        <h2 class="related-heading">🎮 Produtos Relacionados</h2>
+        <div class="related-products-grid" id="relatedProducts"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>XD STORE</h4>
+        <p style="color:var(--muted);font-size:0.9rem;line-height:1.6;">
+          A loja número 1 de contas premium. Entrega imediata e segura via Discord.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Links Rápidos</h4>
+        <a href="../../index.html">Início</a>
+        <a href="../sobre.html">Sobre Nós</a>
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../FAQ.html">Perguntas Frequentes</a>
+        <a href="../Blog.html">Blog</a>
+      </div>
+      <div class="footer-section">
+        <h4>Suporte</h4>
+        <a href="https://discord.gg/3t7g9TbN5M" target="_blank" rel="noopener">Discord</a>
+        <a href="../../checkout.html">Finalizar Compra</a>
+        <a href="../FAQ.html#compras">Política de Reembolso</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 XD STORE. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/store.js"></script>
+  <script type="module" src="../../js/ui.js"></script>
+  <script>
+    // ===== CONFIGURAÇÃO DO PRODUTO =====
+    const PRODUCT_ID = [ID_DO_PRODUTO]; // ALTERE ESTE NÚMERO
+    const VARIATIONS = {
+      option1: { label: '[LABEL_VARIAÇÃO_1]', price: 19.90, description: '[DESCRIÇÃO_DA_VARIAÇÃO_1]' },
+      option2: { label: '[LABEL_VARIAÇÃO_2]', price: 45.90, description: '[DESCRIÇÃO_DA_VARIAÇÃO_2]' },
+      option3: { label: '[LABEL_VARIAÇÃO_3]', price: 79.90, description: '[DESCRIÇÃO_DA_VARIAÇÃO_3]' }
+    };
+
+    let currentVariation = 'option1';
+    let currentPrice = VARIATIONS['option1'].price;
+
+    // ===== INICIALIZAÇÃO =====
+    document.addEventListener('DOMContentLoaded', function() {
+      setupVariationButtons();
+      setupCartButton();
+      loadRelatedProducts();
+    });
+
+    // ===== BOTÕES DE VARIAÇÃO =====
+    function setupVariationButtons() {
+      const buttons = document.querySelectorAll('.variation-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const variationKey = this.dataset.variation;
+          const price = parseFloat(this.dataset.price);
+          
+          // Remove active de todos
+          buttons.forEach(b => b.classList.remove('active'));
+          // Adiciona active neste
+          this.classList.add('active');
+          
+          // Atualiza a seleção
+          currentVariation = variationKey;
+          currentPrice = price;
+          
+          // Atualiza o preço exibido
+          updatePriceDisplay();
+        });
+      });
+    }
+
+    // ===== ATUALIZAR PREÇO NA TELA =====
+    function updatePriceDisplay() {
+      const variation = VARIATIONS[currentVariation];
+      const priceEl = document.getElementById('product-price');
+      const infoEl = document.getElementById('priceUpdateInfo');
+      
+      if (priceEl) {
+        priceEl.textContent = 'R$ ' + currentPrice.toFixed(2).replace('.', ',');
+      }
+      
+      if (infoEl) {
+        infoEl.textContent = 'Preço atualizado: ' + variation.label + ' - R$ ' + currentPrice.toFixed(2).replace('.', ',');
+      }
+    }
+
+    // ===== ADICIONAR AO CARRINHO COM VARIAÇÃO =====
+    function setupCartButton() {
+      const btn = document.getElementById('addToCartBtn');
+      if (!btn) return;
+      
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const variation = VARIATIONS[currentVariation];
+        const productName = '[NOME DO PRODUTO]'; // Use o nome real
+        
+        // Cria um produto customizado com a variação
+        const customProduct = {
+          id: PRODUCT_ID,
+          name: productName + ' (' + variation.label + ')',
+          price: currentPrice,
+          qty: 1,
+          img: '../../assets/images/[NOME_ARQUIVO_IMAGEM].png',
+          variation: currentVariation,
+          description: variation.description
+        };
+        
+        // Adiciona ao carrinho
+        if (window.addToCart) {
+          window.addToCart(customProduct, 1);
+        }
+        
+        // Atualiza UI
+        if (window.updateCartUI) {
+          window.updateCartUI();
+        }
+        
+        // Toast
+        if (window.showToast) {
+          window.showToast(productName + ' (' + variation.label + ') adicionado!', 'success');
+        }
+      });
+    }
+
+    // ===== CARREGAR PRODUTOS RELACIONADOS =====
+    function loadRelatedProducts() {
+      const allProducts = window.getProducts();
+      const related = allProducts.filter(p => p.id !== PRODUCT_ID).slice(0, 3);
+      const relatedContainer = document.getElementById('relatedProducts');
+      
+      if (!relatedContainer) return;
+      
+      related.forEach(function(p) {
+        const card = document.createElement('a');
+        const pSlug = p.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        card.href = pSlug + '.html';
+        card.className = 'related-product-card';
+        card.innerHTML = '<img src="../../' + p.img + '" alt="' + p.name + '" class="related-product-image"><div class="related-product-info"><h4 class="related-product-title">' + p.name + '</h4><p class="related-product-price">R$ ' + Number(p.price).toFixed(2) + '</p></div>';
+        relatedContainer.appendChild(card);
+      });
+    }
+  </script>
+
+  <div id="cart-overlay" class="cart-overlay"></div>
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Carrinho</h3>
+      <button id="close-cart" class="close-cart">×</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <p>Total: <strong id="cart-total">R$ 0,00</strong></p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+        <a href="../../checkout.html" class="checkout-button" aria-label="Finalizar compra">Finalizar compra</a>
+        <div style="display:flex;gap:8px;">
+          <button class="clear-cart" aria-label="Limpar carrinho" style="background:#ff5555;color:#fff;border:none;padding:8px;border-radius:8px;">Limpar carrinho</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+</body>
+</html>
